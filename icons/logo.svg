@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Letterboxd Diary Days logo">
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="#18202b"/>
+  <rect x="5" y="5" width="118" height="118" rx="27" fill="none" stroke="#354454" stroke-width="2"/>
+  <circle cx="40" cy="64" r="19" fill="#f6a33b"/>
+  <circle cx="40" cy="64" r="8" fill="#18202b"/>
+  <path d="M72 36 56 92" fill="none" stroke="#f7f7f2" stroke-linecap="round" stroke-width="9"/>
+  <circle cx="90" cy="64" r="19" fill="#51c3ab"/>
+  <path d="M90 53v12l8 5" fill="none" stroke="#18202b" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+</svg>

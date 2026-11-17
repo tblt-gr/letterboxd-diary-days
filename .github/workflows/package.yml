@@ -1,0 +1,35 @@
+name: Package Extension
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read manifest version
+        id: version
+        run: echo "value=$(node -p 'require("./manifest.json").version')" >> "$GITHUB_OUTPUT"
+
+      - name: Check tag matches manifest
+        env:
+          VERSION: ${{ steps.version.outputs.value }}
+        run: test "$GITHUB_REF_NAME" = "v$VERSION"
+
+      - name: Create ZIP archive
+        env:
+          VERSION: ${{ steps.version.outputs.value }}
+        run: zip "letterboxd-diary-days-$VERSION.zip" manifest.json content.js icons/icon*.png
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: letterboxd-diary-days-${{ steps.version.outputs.value }}.zip
+          generate_release_notes: true
