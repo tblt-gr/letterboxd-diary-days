@@ -26,7 +26,9 @@
     count.textContent = `${originalCount} / ${day}`
     if (originalLabel) {
       const difference = films - day
-      label.textContent = `${originalLabel} (${difference > 0 ? '+' : ''}${difference})`
+      label.textContent = difference === 0
+        ? originalLabel
+        : `${originalLabel} (${difference > 0 ? '+' : ''}${difference})`
     }
   }
 

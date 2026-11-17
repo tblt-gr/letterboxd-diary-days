@@ -33,7 +33,7 @@ The extension uses the count already shown on a member's profile. It changes tha
 
 ## Usage
 
-Open a Letterboxd member's main profile page. The **This year** count gains `/ N`, where `N` is today's position in the calendar year. The label shows `(films − N)`: negative when behind, positive when ahead, and zero when equal. The original count and link remain Letterboxd's own.
+Open a Letterboxd member's main profile page. The **This year** count gains `/ N`, where `N` is today's position in the calendar year. The label shows `(films − N)`: negative when behind and prefixed with `+` when ahead. When the difference is zero, no suffix is shown. The original count and link remain Letterboxd's own.
 
 ## Project structure
 
